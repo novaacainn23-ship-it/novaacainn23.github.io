@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nova's Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding-left: 40px;
+            font-family:'Times New Roman', Times, serif;
+            color:antiquewhite;
+            background-color: #222;
+            transition: background-color 1s; /* smooth change */
+        }
+    </style>
+</head>
+<body>
+    <p> Nova Anastasia</p>
+    <p>Website Applications Programing</p>
+    <p> Behavioral Neuroscience</p>
+    <p> Welcome to My Webpage!!</p>
+    
+    <h1 id="greeting">Hello!</h1>
+
+<script>
+    //getting the current hour
+    const hour = new Date().getHours();
+    const body = document.body;
+    const greeting = document.getElementById("greeting");
+    
+    if (hour >= 5 && hour < 12) {
+        //Morning Time Image
+        const img = document.createElement('img');
+        img.src = "https://i.pinimg.com/736x/b7/e0/6a/b7e06a6faa1535105f8d7f410b1dfb13.jpg";
+        img.alt = "an image of a white cartoon bear-like creature sleeping with morning sun coming through a window. There is an alarm clock sitting by its feet.";
+        body.appendChild(img);
+        greeting.textContent = "Good Morning!";
+    }
+    else if (hour >= 12 && hour < 18) {
+    //Afternoon Time Image
+    const img = document.createElement('img');
+    img.src = "https://i.pinimg.com/736x/d1/05/24/d10524db868d315f40fff35b7525d995.jpg";
+    img.alt = "an image of a white cartoon bear-like creature working at a desk holding a pencil. It is crying looking at the viewer and has a cup of tea."
+    body.appendChild(img);
+    greeting.textContent = "Good Afternoon!";
+    
+    } else {
+    //Night Time Image
+    const img = document.createElement('img');
+    img.src = "https://i.pinimg.com/736x/7f/93/bb/7f93bb1636bed0ac7dba7eb1379ae345.jpg";
+    img.alt = "an image of a small cartoon cat-like creature sitting in a large bed propped against a pillow and playing on a phone. The room is dark except for the phone light."
+    body.appendChild(img);
+    greeting.textContent = "Good Night!";
+    }
+</script>
+</body>
+</html>
